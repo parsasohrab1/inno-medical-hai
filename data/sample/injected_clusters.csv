@@ -1,0 +1,6 @@
+ward,organism,start,end,multiplier
+NICU,S.aureus,235,245,5.12
+ICU,E.coli,159,172,7.74
+ORTHO,S.aureus,338,350,6.63
+ORTHO,P.aeruginosa,182,195,5.01
+MED,P.aeruginosa,244,253,7.19
