@@ -1,0 +1,113 @@
+{
+  "package": "inno_medical_hai",
+  "trl_claim": 4,
+  "data": "synthetic only",
+  "all_pass": true,
+  "runs": [
+    {
+      "seed": 0,
+      "metrics": {
+        "cluster_recall": 0.8,
+        "false_alerts_per_year": 2.0,
+        "antibiogram_mae": 0.0423,
+        "n_clusters": 5
+      },
+      "criteria": [
+        {
+          "metric": "cluster_recall",
+          "op": ">=",
+          "threshold": 0.8,
+          "value": 0.8,
+          "pass": true,
+          "description": "injected clusters detected"
+        },
+        {
+          "metric": "false_alerts_per_year",
+          "op": "<=",
+          "threshold": 3.0,
+          "value": 2.0,
+          "pass": true,
+          "description": "alerts not overlapping an injected cluster, per simulated year"
+        },
+        {
+          "metric": "antibiogram_mae",
+          "op": "<=",
+          "threshold": 0.08,
+          "value": 0.0423,
+          "pass": true,
+          "description": "mean abs. error of ward resistance rates vs truth"
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "metrics": {
+        "cluster_recall": 1.0,
+        "false_alerts_per_year": 1.0,
+        "antibiogram_mae": 0.0476,
+        "n_clusters": 5
+      },
+      "criteria": [
+        {
+          "metric": "cluster_recall",
+          "op": ">=",
+          "threshold": 0.8,
+          "value": 1.0,
+          "pass": true,
+          "description": "injected clusters detected"
+        },
+        {
+          "metric": "false_alerts_per_year",
+          "op": "<=",
+          "threshold": 3.0,
+          "value": 1.0,
+          "pass": true,
+          "description": "alerts not overlapping an injected cluster, per simulated year"
+        },
+        {
+          "metric": "antibiogram_mae",
+          "op": "<=",
+          "threshold": 0.08,
+          "value": 0.0476,
+          "pass": true,
+          "description": "mean abs. error of ward resistance rates vs truth"
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "metrics": {
+        "cluster_recall": 0.8,
+        "false_alerts_per_year": 0.0,
+        "antibiogram_mae": 0.0414,
+        "n_clusters": 5
+      },
+      "criteria": [
+        {
+          "metric": "cluster_recall",
+          "op": ">=",
+          "threshold": 0.8,
+          "value": 0.8,
+          "pass": true,
+          "description": "injected clusters detected"
+        },
+        {
+          "metric": "false_alerts_per_year",
+          "op": "<=",
+          "threshold": 3.0,
+          "value": 0.0,
+          "pass": true,
+          "description": "alerts not overlapping an injected cluster, per simulated year"
+        },
+        {
+          "metric": "antibiogram_mae",
+          "op": "<=",
+          "threshold": 0.08,
+          "value": 0.0414,
+          "pass": true,
+          "description": "mean abs. error of ward resistance rates vs truth"
+        }
+      ]
+    }
+  ]
+}
